@@ -1,0 +1,1 @@
+const openchargeUrl = "https://api.openchargemap.io/v3/poi/?output=json&countrycode=US&maxresults=100?key=789f86d1-a5b2-4530-8ca0-fa64aebcc952";
