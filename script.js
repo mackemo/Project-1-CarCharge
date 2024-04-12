@@ -10,6 +10,6 @@ function apiCall(param) {
 
 div1.addEventListener('submit', function(event) {
     event.preventDefault();
-    const textValue = text.value
-    apiCall(textValue)
-})
+    const textValue = text.value;
+    apiCall(textValue);
+});
