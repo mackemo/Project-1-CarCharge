@@ -1,17 +1,29 @@
-const openchargeUrl = "https://api.openchargemap.io/v3/poi/?output=json&countrycode=US&maxresults=100?key=789f86d1-a5b2-4530-8ca0-fa64aebcc952";
+const searchInput = document.querySelector(`#lon`, `#lat`)
+const formEl = document.getElementById('submit')
+const searchButton = document.querySelector('#search-button')
+const resultsDiv = document.getElementById("results");
+const apiKey = `GSR7zoBZ7gl3FAdkEk2rHsu7C85lXVHL`
+const lat = document.getElementById('lat')
+const lon = document.getElementById('lon')
 
-const text = document.querySelector(`#text`)
-const submit = document.querySelector('.submit')
-const div1 = document.querySelector('.div1')
+function apiCall(param1, param2) {
+   
+    const apiUrl = `https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=${apiKey}&point=${param1},${param2}`
 
-function apiCall(param) {
     
-    const apiKey = `5QiZt17KAHd8oXISNHxv9rnkoERwRGlP`
-    const apiUrl = `https://api.tomtom.com/map/1/tile/basic/main/0/0/0.png?view=Unified&key=${apiKey}`
+
+    fetch(apiUrl).then(function(response){
+        console.log(response);
+        return response .json();
+    }).then(function(data){
+        console.log(data)
+    })
 }
 
-div1.addEventListener('submit', function(event) {
+formEl.addEventListener("submit", function (event) {
     event.preventDefault();
-    const textValue = text.value
-    apiCall(textValue)
-})
+    const query = searchInput.value
+    const longitude = lon.value
+    const latitude = lat.value
+    apiCall(latitude, longitude)
+});
