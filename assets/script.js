@@ -1,12 +1,14 @@
-const searchInput = document.querySelector(`#search`)
+const searchInput = document.querySelector(`#lon`, `#lat`)
 const formEl = document.getElementById('submit')
 const searchButton = document.querySelector('#search-button')
 const resultsDiv = document.getElementById("results");
 const apiKey = `GSR7zoBZ7gl3FAdkEk2rHsu7C85lXVHL`
+const lat = document.getElementById('lat')
+const lon = document.getElementById('lon')
 
-function apiCall(param) {
+function apiCall(param1, param2) {
    
-    const apiUrl = `https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=GSR7zoBZ7gl3FAdkEk2rHsu7C85lXVHL&point=52.41072,4.84239&q=${param}`
+    const apiUrl = `https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=${apiKey}&point=${param1},${param2}`
 
     
 
@@ -21,5 +23,7 @@ function apiCall(param) {
 formEl.addEventListener("submit", function (event) {
     event.preventDefault();
     const query = searchInput.value
-    apiCall(query)
+    const longitude = lon.value
+    const latitude = lat.value
+    apiCall(latitude, longitude)
 });
