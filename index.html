@@ -9,10 +9,53 @@
 </head>
 
 <body>
+    <form id="submit">
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">What city are you in?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text" name="lon" id="lon" placeholder="Enter longitude">
+                <input type="text" name="lat" id="lat" placeholder="Enter latitude">
+                <button type="submit">Search</button>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" >Memphis</button>
+            <button class="btn btn-primary" >Nashville</button>
+            <button class="btn btn-primary" >Knoxville</button>
+            <button class="btn btn-primary" >Chattanooga</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Hide this modal and show the first with the button below.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Click For Data</button>
       
 <form id="submit">
+<<<<<<< HEAD
     <input type="text" name="text" id="search" placeholder="Enter location">
     <button type="submit" id="search-button">Search</button>
+=======
+>>>>>>> 6232d6ec42a8f98211db835f2d29a90d5c0d065c
     <ul id="location-list"></ul>
 </form>
 
