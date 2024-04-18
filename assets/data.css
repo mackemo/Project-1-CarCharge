@@ -3,6 +3,13 @@
     background-color: rgb(79, 158, 228);
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    text-align: center;
 }
 
 body {
