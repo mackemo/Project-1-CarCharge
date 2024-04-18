@@ -1,4 +1,10 @@
 /* Body */
+#town {
+    background-color: rgb(79, 158, 228);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+}
+
 body {
     background-image: url('./images/Nashville-Road-Map.jpg');
     background-size: cover;
@@ -18,7 +24,7 @@ body {
 
 #back-button:hover {
     opacity: 1;
-    background-color: rgb(74, 75, 97); 
+    background-color: rgb(79, 158, 228); 
     color: white;
 }
 
