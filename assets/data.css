@@ -1,0 +1,32 @@
+#back-button {
+    width: 250px;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+#back-button:hover {
+    opacity: 1;
+    background-color: rgb(74, 75, 97); 
+    color: white;
+}
+
+#back-button:active {
+    transform: translateY(4px);
+}
+
+.container {
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+#results, #location {
+    background-color: rgb(69, 69, 102);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(235, 233, 233);
+    border-style: groove;
+    text-align: center;
+}

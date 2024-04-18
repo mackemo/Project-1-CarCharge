@@ -7,7 +7,7 @@ if (locationData) {
     const locationDiv = document.getElementById('location');
     for (let index = 0; index < locaData.length && index < 4; index++) {
         const locData = locaData[index];
-        locationDiv.innerHTML += `<h1>Address ${index + 1}: ${locData.AddressInfo.AddressLine1}</h1>`;
+        locationDiv.innerHTML += `<h3>Address ${index + 1}: </h3></h4> ${locData.AddressInfo.AddressLine1}</h4>`;
     }
 } else {
     console.log('No location data found in local storage.');
@@ -18,11 +18,11 @@ if (storedData) {
     console.log(userData);
     const resultsDiv = document.getElementById('results');
     resultsDiv.innerHTML = `
-        <h1> Average Current Speed: ${userData.flowSegmentData.currentSpeed} Mph </h1>
-        <h1> Current Travel Time: ${userData.flowSegmentData.currentTravelTime} </h1>
-        <h1> Usual Speed: ${userData.flowSegmentData.freeFlowSpeed} Mph </h1>
-        <h1> Usual Travel Time: ${userData.flowSegmentData.freeFlowTravelTime} </h1>
-        <h1> Road Closure: ${userData.flowSegmentData.roadClosure} </h1>
+        <h3> Average Current Speed: </h3><h4> ${userData.flowSegmentData.currentSpeed} Mph </h4>
+        <h3> Current Travel Time: </h3><h4> ${userData.flowSegmentData.currentTravelTime} sec </h4>
+        <h3> Usual Speed: </h3><h4> ${userData.flowSegmentData.freeFlowSpeed} Mph </h4>
+        <h3> Usual Travel Time: </h3><h4> ${userData.flowSegmentData.freeFlowTravelTime} sec </h4>
+        <h3> Road Closure: </h3><h4> ${userData.flowSegmentData.roadClosure} </h4>
     `;
 } else {
     console.log('No user data found in local storage.');
