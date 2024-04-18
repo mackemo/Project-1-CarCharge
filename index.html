@@ -13,6 +13,13 @@
     <h2>Charging Stations</h2>
   </header>
 
+  <div id="paragraph-content" class="d-flex justify-content-center align-items-center" style="width: 50%; margin: 0 auto; margin-top: 100px;">
+    <p>In this application, you can easily find the nearest charging stations for your EV car. 
+      Additional data is displayed as well for you to take note on traffic parameters such as travel time and travel speed.
+      Just click the button below to search for a city in Tennessee and data will be displayed on the next page!
+    </p>
+  </div>
+
   <form id="submit">
   <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
@@ -58,7 +65,9 @@
           </div>
         </div>
       </div>
-      <button id="button" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Search location</button>
+      <div class="d-flex justify-content-center">
+        <button id="button" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Search location</button>
+      </div>
 
 <div id="results"></div>
 
