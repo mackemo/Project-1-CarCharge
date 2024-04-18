@@ -11,25 +11,37 @@ const knoxville = document.getElementById('knoxville')
 const chattanooga = document.getElementById('chattanooga')
 const originalBrightness = document.body.style.filter;
 
+// https://api.openchargemap.io/v3/poi/?output=json&countrycode=US&maxresults=10?key=<your key>
+// https://api.openchargemap.io/v3/poi/?output=json&latitude=40.7128&longitude=-74.0060&distance=10&distanceunit=KM
+const baseUrl = `https://api.openchargemap.io/v3/poi/?output=json&countrycode=US&stateorprovince=TN&maxresults=20?key=789f86d1-a5b2-4530-8ca0-fa64aebcc952`
+fetch(baseUrl).then(function (response) {
+    console.log(response);
+    return response.json();
+}).then(function (data) {
+    console.log(data)
+    localStorage.setItem('locationData', JSON.stringify(data));
+});
+
 function apiCall(param1, param2) {
-   
+
     const apiUrl = `https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=${apiKey}&point=${param1},${param2}`
 
-     fetch(apiUrl).then(function(response){
+    fetch(apiUrl).then(function (response) {
         console.log(response);
-        return response .json(); 
-    }).then(function(data){
+        return response.json();
+    }).then(function (data) {
         console.log(data)
-        localStorage.setItem('user', JSON.stringify(data));
-  });
+        localStorage.setItem('userData', JSON.stringify(data));
+        window.location.href = "data.html"
+    });
 }
 
 formEl.addEventListener("submit", function (event) {
     event.preventDefault();
     const longitude = lon.value
     const latitude = lat.value
-    apiCall(latitude, longitude) 
-    window.location.href = "data.html"
+    apiCall(latitude, longitude)
+
 });
 
 
