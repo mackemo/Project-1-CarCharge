@@ -6,6 +6,11 @@ header {
     background-color: rgb(79, 158, 228);
     margin-top: 50px;
     border-radius: 20px;
+    border-width: 5px;
+}
+
+#chargingStations {
+    font-size: 60px;
 }
 
 /* Body */
