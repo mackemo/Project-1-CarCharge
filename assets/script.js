@@ -29,7 +29,7 @@ fetch(baseUrl).then(function (response) {
 
 function apiCall(param1, param2) {
 
-    const apiUrl = `https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=${apiKey}&point=${param1},${param2}`
+    const apiUrl = `https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=${apiKey}&point=${param1},${param2}&unit=mph`
 
     fetch(apiUrl).then(function (response) {
         console.log(response);
