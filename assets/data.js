@@ -10,7 +10,7 @@ if (locationData) {
 const locaData=JSON.parse(locationData)
 console.log(locaData)
 const locationDiv = document.getElementById('location')
-locationDiv.innerHTML = `<h1> Here are nearby charging stations: ${locationData.[0].AddressInfo.AddressLine1}</h1>`
+locationDiv.innerHTML = `<h1> Here are nearby charging stations: ${locationData.AddressInfo.AddressLine1}</h1>`
 
 if (storedData) {
     // console.log('Data retrieved from local storage:', storedData);
