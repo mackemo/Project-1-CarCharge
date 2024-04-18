@@ -1,3 +1,4 @@
+/* Body */
 body {
     background-image: url('./images/Nashville-Road-Map.jpg');
     background-size: cover;
@@ -5,6 +6,7 @@ body {
     min-height: 100vh;
 }
 
+/* Button */
 #back-button {
     width: 250px;
     transition-duration: 0.4s;
@@ -24,6 +26,7 @@ body {
     transform: translateY(4px);
 }
 
+/* Results */
 .container {
     display: flex; 
     justify-content: center;

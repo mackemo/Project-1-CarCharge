@@ -1,3 +1,4 @@
+/* Header */
 header {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(235, 233, 233);
@@ -6,6 +7,7 @@ header {
     margin-top: 50px;
 }
 
+/* Body */
 body {
     background-image: url('./images/Nashville-Road-Map.jpg');
     background-size: cover;
@@ -13,6 +15,7 @@ body {
     min-height: 100vh;
 }
 
+/* Button */
 #button {
     width: 250px;
     transition-duration: 0.4s;
@@ -32,6 +35,7 @@ body {
     transform: translateY(4px);
 }
 
+/* Paragraph */
 #paragraph-content {
     background-color: white;
     color: black;

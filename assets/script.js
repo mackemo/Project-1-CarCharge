@@ -11,25 +11,24 @@ const knoxville = document.getElementById('knoxville')
 const chattanooga = document.getElementById('chattanooga')
 const originalBrightness = document.body.style.filter;
 
-// https://api.openchargemap.io/v3/poi/?output=json&countrycode=US&maxresults=10?key=<your key>
-// https://api.openchargemap.io/v3/poi/?output=json&latitude=40.7128&longitude=-74.0060&distance=10&distanceunit=KM
-
+// function for OpenCharge API
 function apiCall1(lat, lon) {
     const baseUrl = `https://api.openchargemap.io/v3/poi/?output=json&countrycode=US&stateorprovince=TN&maxresults=20?key=789f86d1-a5b2-4530-8ca0-fa64aebcc952&latitude=${lat}&longitude=${lon}`
-fetch(baseUrl).then(function (response) {
-    console.log(response);
-    return response.json();
-}).then(function (data) {
-    console.log(data)
-    localStorage.setItem('locationData', JSON.stringify(data));
-    window.location.href = "data.html"
-});
-
+    
+    fetch(baseUrl).then(function (response) {
+        console.log(response);
+        return response.json();
+    }).then(function (data) {
+        console.log(data)
+        // Local Storage
+        localStorage.setItem('locationData', JSON.stringify(data));
+        window.location.href = "data.html"
+    });
 
 } 
 
+// function for TomTom API
 function apiCall(param1, param2) {
-
     const apiUrl = `https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=${apiKey}&point=${param1},${param2}&unit=mph`
 
     fetch(apiUrl).then(function (response) {
@@ -37,22 +36,21 @@ function apiCall(param1, param2) {
         return response.json();
     }).then(function (data) {
         console.log(data)
+        // Local Storage
         localStorage.setItem('userData', JSON.stringify(data));
-        
     });
 }
 
+// Event Listener for Search Button
 formEl.addEventListener("submit", function (event) {
     event.preventDefault();
     const longitude = lon.value
     const latitude = lat.value
-    apiCall(latitude, longitude)
+    apiCall(latitude, longitude) // Call functions
     apiCall1(latitude, longitude)
-
-
 });
 
-
+// Saved coordinated for 4 cities
 memphis.addEventListener("click", function (event) {
     event.preventDefault();
     lon.value = -90.0490
