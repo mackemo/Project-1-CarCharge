@@ -12,7 +12,18 @@
   <header class="text-center">
     <h2>Charging Stations</h2>
   </header>
-  
+
+  <div id="paragraph-content" class="d-flex justify-content-center align-items-center text-center" style="width: 50%; margin: 0 auto; margin-top: 100px;">
+    <p>
+      In this application, you can easily find the nearest charging stations for your EV car!
+      <br><br>
+      With a click of a button, four addresses of the nearest charging stations will 
+      display as well as traffic parameters like travel time and travel speed.
+      <br><br>
+      Just click the button below to search for a city in Tennessee!
+    </p>
+  </div>
+
   <form id="submit">
   <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
@@ -45,11 +56,6 @@
   </div>
 </form>
 
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
       <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
@@ -60,19 +66,12 @@
             <div class="modal-body">
               Hide this modal and show the first with the button below.
             </div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
-            </div>
           </div>
         </div>
       </div>
-      <button id="button" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Search location</button>
-      
-<form id="submit">
-    <input type="text" name="text" id="search" placeholder="Enter location">
-    <button type="submit" id="search-button">Search</button>
-    <ul id="location-list"></ul>
-</form>
+      <div class="d-flex justify-content-center">
+        <button id="button" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Search location</button>
+      </div>
 
 <div id="results"></div>
 

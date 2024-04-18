@@ -22,6 +22,7 @@ fetch(baseUrl).then(function (response) {
 }).then(function (data) {
     console.log(data)
     localStorage.setItem('locationData', JSON.stringify(data));
+    window.location.href = "data.html"
 });
 
 
@@ -37,7 +38,7 @@ function apiCall(param1, param2) {
     }).then(function (data) {
         console.log(data)
         localStorage.setItem('userData', JSON.stringify(data));
-        window.location.href = "data.html"
+        
     });
 }
 
