@@ -9,24 +9,38 @@
 </head>
 
 <body>
-    <form id="submit">
-    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel">What city are you in?</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <input type="text" name="lon" id="lon" placeholder="Enter longitude">
-                <input type="text" name="lat" id="lat" placeholder="Enter latitude">
-                <button type="submit">Search</button>
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" >Memphis</button>
-            <button class="btn btn-primary" >Nashville</button>
-            <button class="btn btn-primary" >Knoxville</button>
-            <button class="btn btn-primary" >Chattanooga</button>
+  <form id="submit">
+  <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel">What city are you in?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" name="lat" id="lat" placeholder="Enter latitude">
+          <input type="text" name="lon" id="lon" placeholder="Enter longitude">
+          <button type="submit">Search</button>
+        </div>
+        <div class="modal-footer">
+          <form>
+            <button id="memphis" type="submit" class="btn btn-primary">Memphis</button>
+          </form>
+          <form id="nashville">
+            <button type="submit" class="btn btn-primary">Nashville</button>
+          </form>
+          <form id="knoxville">
+            <button type="submit" class="btn btn-primary">Knoxville</button>
+          </form>
+          <form id="chattanooga">
+            <button type="submit" class="btn btn-primary">Chattanooga</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+
             </div>
           </div>
         </div>
@@ -51,8 +65,12 @@
       <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Click For Data</button>
       
 <form id="submit">
+    <input type="text" name="text" id="search" placeholder="Enter location">
+    <button type="submit" id="search-button">Search</button>
     <ul id="location-list"></ul>
 </form>
+
+<div id="results"></div>
 
 <script src="./assets/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
