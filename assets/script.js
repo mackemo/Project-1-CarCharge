@@ -16,20 +16,20 @@ const originalBrightness = document.body.style.filter;
 
 function apiCall1(lat, lon) {
     const baseUrl = `https://api.openchargemap.io/v3/poi/?output=json&countrycode=US&stateorprovince=TN&maxresults=20?key=789f86d1-a5b2-4530-8ca0-fa64aebcc952&latitude=${lat}&longitude=${lon}`
-    fetch(baseUrl).then(function (response) {
-        console.log(response);
-        return response.json();
-    }).then(function (data) {
-        console.log(data)
-        localStorage.setItem('locationData', JSON.stringify(data));
-    });
-    
-    
+fetch(baseUrl).then(function (response) {
+    console.log(response);
+    return response.json();
+}).then(function (data) {
+    console.log(data)
+    localStorage.setItem('locationData', JSON.stringify(data));
+});
+
+
 } 
 
 function apiCall(param1, param2) {
 
-    const apiUrl = `https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=${apiKey}&point=${param1},${param2}`
+    const apiUrl = `https://api.tomtom.com/traffic/services/4/flowSegmentData/absolute/10/json?key=${apiKey}&point=${param1},${param2}&unit=mph`
 
     fetch(apiUrl).then(function (response) {
         console.log(response);
