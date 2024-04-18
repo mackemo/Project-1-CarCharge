@@ -5,19 +5,20 @@
 
 The first project from a bootcamp where a group of collaborators needed to come up with a real-world problem that could be solved with code. The problem being solved in this project is a way for electric car owners to quickly find a charging station to charge their car.
 
-<img src=/>
+<img src=""/>
+<img src=""/>
+<img src=""/>
 
 
 ## User Story
 
 - AS an electric car owner
 - I WANT to find an easy route to a charging station
-- SO THAT I can beat traffic and quickly get me car charged
-
+- SO THAT I can beat traffic and quickly get my car charged
 
 ## Acceptance Criteria
 
-GIVEN
+GIVEN an application that finds charging stations for your EV car
 WHEN I open the application
 THEN I am prompted with a screen has a search button and a paragraph detailing the application
 WHEN I click on the search button
@@ -33,16 +34,15 @@ THEN I am directed back to the first page
 WHEN the application is being used on any device
 THEN the application is responsive to any screen size
 
-
 ## Process
 
 The process included creating a modal form for the inputs of longitude and latitude. Four cities were saved as objects with their respective coordinates. Moreso, there included two pages with each their own html, js, and css files which were all linked together in the html. The process of this application required the fetching of the APIs and the response would store the coordinate info into local storage. The data was pulled from storage to be displayed on the screen. A back button was added on the second page to go back to the first page. 
-
 
 ## Links
 
 Link to website used for this challenge.
 https://mackemo.github.io/project-1-charge-car/
+
 
 Link to public Github repository for this challenge.
 https://github.com/mackemo/project-1-charge-car
@@ -68,4 +68,6 @@ Matthew Thomas, Sean Crocker, Brandon Morrison, Mackenzie Moore
 ## Acknowledgement
 
 Project was done by the knowledge learned from bootcamp instructor John
+
+
 
