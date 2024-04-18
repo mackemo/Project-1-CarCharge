@@ -1,10 +1,11 @@
 /* Header */
 header {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: rgb(235, 233, 233);
     border-style: groove;
-    background-color: rgb(69, 69, 102);
+    background-color: rgb(79, 158, 228);
     margin-top: 50px;
+    border-radius: 20px;
 }
 
 /* Body */
@@ -27,7 +28,7 @@ body {
 
 #button:hover {
     opacity: 1;
-    background-color: rgb(74, 75, 97); 
+    background-color: rgb(79, 158, 228); 
     color: white;
 }
 
