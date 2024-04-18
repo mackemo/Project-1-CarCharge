@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css"/>
-    <title>Document</title>
+    <title>Charging Stations</title>
 </head>
 
 <body>
+  <!--Header-->
+  <header class="text-center">
+    <h2>Charging Stations</h2>
+  </header>
+
+  <!--Paragraph Content-->
+  <div id="paragraph-content" class="d-flex justify-content-center align-items-center text-center" style="width: 50%; margin: 0 auto; margin-top: 100px;">
+    <p>
+      In this application, you can easily find the nearest charging stations for your EV car!
+      <br><br>
+      With a click of a button, four addresses of the nearest charging stations will 
+      display as well as traffic parameters like travel time and travel speed.
+      <br><br>
+      Just click the button below to search for a city in Tennessee!
+    </p>
+  </div>
+
+  <!--Modal after clicking button-->
   <form id="submit">
   <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
@@ -41,34 +59,10 @@
   </div>
 </form>
 
-            </div>
-          </div>
-        </div>
+<!--Search Button-->
+      <div class="d-flex justify-content-center">
+        <button id="button" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Search location</button>
       </div>
-    </form>
-      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Modal 2</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              Hide this modal and show the first with the button below.
-            </div>
-            <div class="modal-footer">
-              <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to first</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button id="button" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Search location</button>
-      
-<form id="submit">
-    <input type="text" name="text" id="search" placeholder="Enter location">
-    <button type="submit" id="search-button">Search</button>
-    <ul id="location-list"></ul>
-</form>
 
 <div id="results"></div>
 

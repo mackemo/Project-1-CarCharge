@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/data.css"/>
+    <title>Charging Stations</title>
 </head>
-<body>
-    <div id="results"></div>
-    <div id="location">
 
+<body>
+    <div id="town"></div>
+    <!--Results-->
+    <div class="container">
+        <div id="results" class="d-flex justify-content-center align-items-center" style="width: 50%; margin-top: 100px;">
+            <!-- Content for results-->
+        </div>
+        <div id="location" class="d-flex justify-content-center align-items-center" style="width: 50%; margin-top: 100px;">
+            <!-- Content for location-->
+        </div>
     </div>
+    
+    <!--Back Button-->
+    <div class="modal-footer">
+        <button id="back-button" class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back</button>
+    </div>
+
+    
     <script src="./assets/data.js"></script>
 </body>
 </html>
+
