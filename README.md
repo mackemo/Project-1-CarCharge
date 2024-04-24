@@ -21,9 +21,7 @@ GIVEN an application that finds charging stations for your EV car
 WHEN I open the application
 THEN I am prompted with a screen has a search button and a paragraph detailing the application
 WHEN I click on the search button
-THEN a modal pops up with inputs for latitude and longitude
-WHEN I click on one of the saved cities on the modal
-THEN the coordinates populate into the input boxes
+THEN a modal pops up with an input for city
 WHEN I click search on the modal
 THEN I am directed to the second page
 WHEN I am on the second page
@@ -35,7 +33,7 @@ THEN the application is responsive to any screen size
 
 ## Process
 
-The process included creating a modal form for the inputs of longitude and latitude. Four cities were saved as objects with their respective coordinates. Moreso, there included two pages with each their own html, js, and css files which were all linked together in the html. The process of this application required the fetching of the APIs and the response would store the coordinate info into local storage. The data was pulled from storage to be displayed on the screen. A back button was added on the second page to go back to the first page. 
+The process included creating a modal form for the input of a city. Once a city is searched, the next page pops up with the city details. This application includes two pages with each their own html, js, and css files which were all linked together in the html. The process of this application required the fetching of the APIs and the response would store the info into local storage. The data was pulled from storage to be displayed on the screen. A back button was added on the second page to go back to the first page. 
 
 ## Links
 
