@@ -53,3 +53,14 @@ body {
     border-style: groove;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .container {
+        display: flex; 
+        flex-direction: column;
+    }
+    #results, #location {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
