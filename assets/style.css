@@ -22,7 +22,7 @@ body {
 }
 
 /* Button */
-#search-btn {
+#button {
     width: 250px;
     transition-duration: 0.4s;
     background-color: white;
@@ -31,13 +31,13 @@ body {
     margin-top: 50px;
 }
 
-#search-btn:hover {
+#button:hover {
     opacity: 1;
     background-color: rgb(79, 158, 228); 
     color: white;
 }
 
-#search-btn:active {
+#button:active {
     transform: translateY(4px);
 }
 
