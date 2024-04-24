@@ -8,7 +8,8 @@ const locationDiv = document.getElementById('location')
 // For loop to loop over location results
 for (let index = 0; index < locaData.length && index < 4; index++) {
     const locData = locaData[index];
-    locationDiv.innerHTML += `<h3>Address ${index + 1}: </h3></h4> ${locData.AddressInfo.AddressLine1}</h4>`;
+    locationDiv.innerHTML += `
+    <h3 class="results-content">Address ${index + 1}: </h3></h4> ${locData.AddressInfo.AddressLine1}</h4>`;
 }
 
 const town = document.getElementById('town')
@@ -21,12 +22,31 @@ if (storedData) {
     const resultsDiv = document.getElementById('results');
     // displays traffic results
     resultsDiv.innerHTML = `
-        <h3> Average Current Speed: </h3><h4> ${userData.flowSegmentData.currentSpeed} Mph </h4>
-        <h3> Current Travel Time: </h3><h4> ${userData.flowSegmentData.currentTravelTime} sec </h4>
-        <h3> Usual Speed: </h3><h4> ${userData.flowSegmentData.freeFlowSpeed} Mph </h4>
-        <h3> Usual Travel Time: </h3><h4> ${userData.flowSegmentData.freeFlowTravelTime} sec </h4>
-        <h3> Road Closure: </h3><h4> ${userData.flowSegmentData.roadClosure} </h4>
-    `;
+    <h2 class="title">City Traffic:</h2>
+    <h4 class="content">
+        <span class="titletwo">Speed:</span>
+        <span class="results-content">Average Speed:</span>
+        <span class="value">${userData.flowSegmentData.currentSpeed} Mph</span>
+        <br>
+        <span class="results-content">Usual Speed:</span>
+        <span class="value">${userData.flowSegmentData.freeFlowSpeed} Mph</span>
+    </h4>
+    <br>
+    <h4 class="content">
+        <span class="titletwo">Time:</span>
+        <span class="results-content">Current Travel Time:</span>
+        <span class="value">${userData.flowSegmentData.currentTravelTime} sec</span>
+        <br>
+        <span class="results-content">Usual Travel Time:</span>
+        <span class="value">${userData.flowSegmentData.freeFlowTravelTime} sec</span>
+    </h4>
+    <br>
+    <h4 class="content">
+        <span class="results-content">Road Closure:</span>
+        <span class="value">${userData.flowSegmentData.roadClosure}</span>
+    </h4>
+`;
+
 } else {
     console.log('No user data found in local storage.');
 }
