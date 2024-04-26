@@ -9,6 +9,7 @@ The first project from a bootcamp where a group of collaborators needed to come 
 <img src="./assets/images/screenshot-1.png"/>
 <img src="./assets/images/screenshot-2.png"/>
 
+![alt text](image.png)
 ## User Story
 
 - AS an electric car owner
