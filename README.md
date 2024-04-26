@@ -5,7 +5,7 @@
 
 The first project from a bootcamp where a group of collaborators needed to come up with a real-world problem that could be solved with code. The problem being solved in this project is a way for electric car owners to quickly find a charging station to charge their car.
 
-<img src="./assets/images/sss1.png"/>
+<img src="./assets/images/ss1.png"/>
 <img src="./assets/images/screenshot-1.png"/>
 <img src="./assets/images/screenshot-2.png"/>
 
